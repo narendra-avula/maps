@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="angularMaps">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Maps</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap-theme.css">
+
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="vendor/ui-select/select.css">
+
+
+    <!-- Vendor JS Files -->
+    <script src="vendor/angular/angular.js"></script>
+    <script src="vendor/ui-router/angular-ui-router.js"></script>
+    <script src="vendor/ui-bootstrap/ui-bootstrap.js"></script>
+    <script src="vendor/ui-select/select.js"></script>
+
+
+    <!-- Angular Google Maps Dependency -->
+    <script src="vendor/lodash/lodash.js"></script>
+    <script src="vendor/angular-simple-logger/angular-simple-logger.js"></script>
+    <script src="vendor/angular-google-maps/angular-google-maps.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBY9k5isUwYXzTmn24mJTg0sU5-D-0lXlw" type="text/javascript"></script>
+
+
+    <!-- Base app related stuff -->
+    <script src="app/app.js"></script>
+    <script src="app/config.js"></script>
+	<script src="app/services/HttpInterceptor.js"></script>
+
+
+    <!-- Directives -->
+    <script src="app/directives/Loader.js"></script>
+
+
+    <!-- Controllers -->
+    <script src="app/controllers/HomeCtrl.js"></script>
+	<script src="app/controllers/ExploreCtrl.js"></script>
+	<script src="app/controllers/AboutCtrl.js"></script>
+	<script src="app/controllers/CountryCtrl.js"></script>
+	<script src="app/controllers/MapCtrl.js"></script>
+
+
+
+    <!-- Services -->
+    <script src="app/services/Country.js"></script>
+
+
+
+</head>
+<body>
+    <div loader></div>
+
+    <div ng-include src="'views/partials/top-nav.html'"></div>
+
+    <div class="container">
+        <div ui-view></div>
+    </div>
+</body>
+</html>
